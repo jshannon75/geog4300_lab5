@@ -33,7 +33,7 @@ We're going to look at the variable for average weekly income: EARNWEEK. Load th
 
 ###Part 2: Testing the differences between states###
 
-Based on the results of the previous questions, test whether the incomes of survey respondents in these two states were equal or different.
+Based on the results of the previous questions, test whether the incomes of survey respondents in New York and New Jersey were equal or different.
 
 **Question 3 (2 points)** _Based on the normality of the data, what is the appropriate test for determining if actual household incomes between these two states are significantly different (p=0.05)? Explain why this test is appropriate and give a null and alternative hypothesis for this test_
 
@@ -61,7 +61,7 @@ Go back to the CPS data and select data for just the states in the _**Midwest**_
 ```
 
 
-**Question 7 (3 points)** _Conduct your ANOVA test. Then use pairwise.t.test for post hoc testing using the Bonferroni correction._
+**Question 7 (3 points)** _Conduct your ANOVA test. Then use the TukeyHSD for post hoc testing._
 
 ```{r}
 #Code goes here.
@@ -81,7 +81,7 @@ While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits
 ```
 
 
-**Question 10 (2 points)** _Create a table of responses to the FSFDBNK variable (the columns of the table) against . Then conduct a chi square test on this table._
+**Question 10 (2 points)** _Create a contingency table of responses to the FSFDBNK variable (the columns of the table). Then conduct a chi square test on this table._
 
 ```{r}
 #Code goes here.
