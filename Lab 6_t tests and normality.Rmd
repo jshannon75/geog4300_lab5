@@ -1,0 +1,114 @@
+---
+title: 'Geog4/6300: Lab 6'
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## One and two sample difference tests; ANOVA; Goodness of fit tests
+
+**Due:** Monday, Nov. 6
+
+**Value:** 30 points
+
+**Overview:**
+This lab continues work with the CPS dataset you used in Lab 4. You'll be conducting normality tests, two sample t tests, chi square tests, and ANOVA to test for differences within these data.
+
+###Part 1: Testing the normality of the EARNWEEK variable
+
+We're going to look at the variable for average weekly income: EARNWEEK. Load the IPMUS CPS dataset in this repository using read_csv. Filter these data so you have only valid responses, removing any observations with a value of 9999.99. Then filter for only those responses from the states of New York and New Jersey. Now let's test the normality of this variable.
+
+**Question 1 (2 points)** _Load the CPS data and filter it to only valid responses._
+
+```{r}
+#Code here
+```
+
+
+**Question 2 (3 points)** _To assess the normality of the EARNWEEK variable, create a random sample of 5,000 records using the sample_n function. Then do the following: 1) Perform a Shapiro-Wilk normality test on this variable. 2) Create a Q-Q plot with a line showing the normal distribution. 3) Create a histogram using ggplot or the base R function._
+
+```{r}
+#Code here.
+```
+
+
+**Question 3 (2 points)** _Based on the results you saw in question 1, is this variable normally distributed? How do each of those three tests inform your decision?_
+
+{Your response here}
+
+###Part 2: Testing the differences between states###
+
+Based on the results of the previous questions, test whether the incomes of survey respondents in Atlanta (METAREA code 521) and Chicago (1605) metropolitan areas were equal or different.
+
+**Question 4 (2 points)** _Based on the normality of the data, what is the appropriate test for determining if actual household incomes between these two states are significantly different (p=0.05)? Explain why this test is appropriate and give a null and alternative hypothesis for this test_
+
+{Your response here.}
+
+**Question 5 (3 points)** _Create separate data frames for each metro. Then run the test you identified in question 3. Also identify the mean and median values for each dataset._
+
+```{r}
+#Code goeshere
+```
+
+
+**Question 6 (2 points)** _Interpret the results of the analysis you did in question 4. Do you reject the null hypothesis? Why or why not? What can we say about household incomes in these two metros?_
+
+{Your response here.}
+
+###Part 3: Testing income across multiple states using ANOVA###
+
+Go back to the CPS data and select data for just the metros in the _**West**_ Region (the "Region" variable). To do this, you'd filter based on the region code, filtering out any observations with a METAREA value of 9999.
+
+Using ANOVA test, we can test for differences across these states. For the purposes of this section, we will assume these data are normally distributed even if that's not the case.
+
+**Question 7 (2 points)** _Create a data frame with all valid responses in the four largest metro areas in the West region, based on the METAREA codes in the codebook: Denver, Los Angeles, San Francisco, and Seattle. Using group_by and summarise, calculate the mean and median income for each metro. Call the data frame you create using kable._
+
+```{r}
+#Code goes here
+```
+
+**Question 8 (3 points)** _Conduct your ANOVA test to assess whether these metros have differences in earnings per week. You may need to convert the METAREA code to a character using mutate and as.character. Then use TukeyHSD for post hoc testing._
+
+```{r}
+#Code goes here.
+```
+
+
+**Question 89(3 points)** _Using your responses from questions 6 and 7, summarise the results of this analysis. What was your null hypothesis, and can you reject it? Why or why not? What else can you say about differences between the largest metros in this region? Be sure to use both post hoc testing and your table of mean/median values._
+
+###Part 4: Analyzing differences in rates for use of food assistance
+
+While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits, the CPS provides data on other emergency food sources. Here, you will look at use of emergency food from a church, food pantry, or food bank over the last year (FSFDBNK) in New York, New Jersey, and Pennsylvania.
+
+**Question 10 (2 points)** _Go back to the original CPS dataset and filter for records with valid responses to FSFDBNK (<6 on the scale) that are in the states listed above. Call the head of the table when done_
+
+```{r}
+#Code goes here.
+```
+
+
+**Question 11 (3 points)** _Create a contingency table of responses to the FSFDBNK variable (the columns of the table) by state using group_by and summarise. Then conduct a chi square test on this table._
+
+```{r}
+#Code goes here.
+```
+
+**Question 12 (3 points)** _Create a small multiples bar graph, faceted by state, that shows the number of responses in each category for the table you created in question 11. You will need to use state="identity" in the geom_bar function. You will also need to use scales="free" as a parameter in the faceting function to let the y axis values vary by state._
+
+```{r}
+#Code goes here
+```
+
+**Question 13 (2 points)** _What were your null and alternative hypotheses for the chi square test? Based on the results of your test and the visualization you made for question 12, what conclusions can you make about food bank usage? _
+
+{Response goes here.}
+
+###Extra credit! (2 points)
+Calculate which city in this three state area is highest for category 1 (no usage of food bank sites). What is city and what is their rate?
+
+```{r}
+#Code goes here
+```
+
