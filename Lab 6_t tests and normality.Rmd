@@ -1,15 +1,18 @@
 ---
 title: 'Geog4/6300: Lab 6'
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
 ```
 
 ## One and two sample difference tests; ANOVA; Goodness of fit tests
 
-**Due:** Monday, Nov. 6
+**Due:** Wednesday, Nov. 6
 
 **Value:** 30 points
 
@@ -18,12 +21,13 @@ This lab continues work with the CPS dataset you used in Lab 4. You'll be conduc
 
 ###Part 1: Testing the normality of the EARNWEEK variable
 
-We're going to look at the variable for average weekly income: EARNWEEK. Load the IPMUS CPS dataset in this repository using read_csv. Filter these data so you have only valid responses, removing any observations with a value of 9999.99. Then filter for only those responses from the states of New York and New Jersey. Now let's test the normality of this variable.
+We're going to look at the variable for average weekly income: EARNWEEK. Load the IPMUS CPS dataset in this repository using read_csv. Filter these data so you have only valid responses, removing any observations with a value of 9999.99. Now let's test the normality of this variable.
 
 **Question 1 (2 points)** _Load the CPS data and filter it to only valid responses._
 
 ```{r}
 #Code here
+
 ```
 
 
@@ -31,6 +35,7 @@ We're going to look at the variable for average weekly income: EARNWEEK. Load th
 
 ```{r}
 #Code here.
+
 ```
 
 
@@ -42,7 +47,7 @@ We're going to look at the variable for average weekly income: EARNWEEK. Load th
 
 Based on the results of the previous questions, test whether the incomes of survey respondents in Atlanta (METAREA code 521) and Chicago (1605) metropolitan areas were equal or different.
 
-**Question 4 (2 points)** _Based on the normality of the data, what is the appropriate test for determining if actual household incomes between these two states are significantly different (p=0.05)? Explain why this test is appropriate and give a null and alternative hypothesis for this test_
+**Question 4 (2 points)** _Based on the normality of the data, what is the appropriate test for determining if actual household incomes between these cities are significantly different (p=0.05)? Explain why this test is appropriate and give a null and alternative hypothesis for this test_
 
 {Your response here.}
 
