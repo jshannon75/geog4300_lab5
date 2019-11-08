@@ -94,7 +94,7 @@ While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits
 ```
 
 
-**Question 11 (3 points)** _Create a contingency table of responses to the FSFDBNK variable (the columns of the table) by state using group_by and summarise. Then conduct a chi square test on this table._
+**Question 11 (3 points)** _Create a contingency table of responses to the FSFDBNK variable (the columns of the table) using the table function. Then conduct a chi square test on this table._
 
 ```{r}
 #Code goes here.
