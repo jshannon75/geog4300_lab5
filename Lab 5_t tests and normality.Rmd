@@ -77,7 +77,7 @@ While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits
 #Code goes here.
 ```
 
-**Question 9 (4 points)** _Create a small multiples bar graph, faceted by state, that shows the number of responses in each category for the table you created in question 11. You will need to use stat="identity" in the geom_bar function. You will also need to use scales="free" as a parameter in the faceting function to let the y axis values vary by state._
+**Question 9 (4 points)** _Create a small multiples bar graph, faceted by state, that shows the number of responses in each category for the table you created in question 8. You will need to use stat="identity" in the geom_bar function. You will also need to use scales="free" as a parameter in the faceting function to let the y axis values vary by state._
 
 ```{r}
 #Code goes here
