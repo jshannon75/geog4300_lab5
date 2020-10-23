@@ -1,0 +1,51 @@
+name,label,varname,y2008,y2012
+B03002_001,Estimate!!Total,totpop,1,1
+B03002_003,Estimate!!Total!!Not Hispanic or Latino!!White alone,wht_pop,1,1
+B03002_004,Estimate!!Total!!Not Hispanic or Latino!!Black or African American alone,afam_pop,1,1
+B03002_006,Estimate!!Total!!Not Hispanic or Latino!!Asian alone,asn_pop,1,1
+B03002_012,Estimate!!Total!!Hispanic or Latino,hisp_pop,1,1
+B24041_001,Estimate!!Total,totpop_ind,1,1
+B24041_002,"Estimate!!Total!!Agriculture, forestry, fishing and hunting, and mining",indpop_ag,1,1
+B24041_005,Estimate!!Total!!Construction,indpop_const,1,1
+B24041_006,Estimate!!Total!!Manufacturing,indpop_manuf,1,1
+B24041_007,Estimate!!Total!!Wholesale trade,indpop_trade,1,1
+B24041_008,Estimate!!Total!!Retail trade,indpop_retail,1,1
+B24041_009,"Estimate!!Total!!Transportation and warehousing, and utilities",indpop_transport,1,1
+B24041_012,Estimate!!Total!!Information,indpop_info,1,1
+B24041_016,"Estimate!!Total!!Professional, scientific, and management, and administrative and waste management services",indpop_prof,1,1
+B24041_020,"Estimate!!Total!!Educational services, and health care and social assistance",indpop_ed,1,1
+B24041_023,"Estimate!!Total!!Arts, entertainment, and recreation, and accommodation and food services",indpop_arts,1,1
+B24041_026,Estimate!!Total!!Other services except public administration,indpop_serv,1,1
+B24041_027,Estimate!!Total!!Public administration,indpop_pubadm,1,1
+B19013_001,Estimate!!Median household income in the past 12 months (in inflation-adjusted dollars),medinc,1,1
+B15003_001,Estimate!!Total,ed_totpop,0,1
+B15003_002,Estimate!!Total!!No schooling completed,ed_noschool,0,1
+B15003_003,Estimate!!Total!!Nursery school,ed_nursery,0,1
+B15003_004,Estimate!!Total!!Kindergarten,ed_k,0,1
+B15003_005,Estimate!!Total!!1st grade,ed_1,0,1
+B15003_006,Estimate!!Total!!2nd grade,ed_2,0,1
+B15003_007,Estimate!!Total!!3rd grade,ed_3,0,1
+B15003_008,Estimate!!Total!!4th grade,ed_4,0,1
+B15003_009,Estimate!!Total!!5th grade,ed_5,0,1
+B15003_010,Estimate!!Total!!6th grade,ed_6,0,1
+B15003_011,Estimate!!Total!!7th grade,ed_7,0,1
+B15003_012,Estimate!!Total!!8th grade,ed_8,0,1
+B15003_013,Estimate!!Total!!9th grade,ed_9,0,1
+B15003_014,Estimate!!Total!!10th grade,ed_10,0,1
+B15003_015,Estimate!!Total!!11th grade,ed_11,0,1
+B15003_016,"Estimate!!Total!!12th grade, no diploma",ed_12,0,1
+B15003_017,Estimate!!Total!!Regular high school diploma,ed_diploma,0,1
+B15003_018,Estimate!!Total!!GED or alternative credential,ed_ged,0,1
+B15003_019,"Estimate!!Total!!Some college, less than 1 year",ed_somecol1,0,1
+B15003_020,"Estimate!!Total!!Some college, 1 or more years, no degree",ed_somecol ,0,1
+B15003_021,Estimate!!Total!!Associate's degree,ed_associate,0,1
+B15003_022,Estimate!!Total!!Bachelor's degree,ed_ba,0,1
+B15003_023,Estimate!!Total!!Master's degree,ed_ma,0,1
+B15003_024,Estimate!!Total!!Professional school degree,ed_profdeg,0,1
+B15003_025,Estimate!!Total!!Doctorate degree,ed_doc,0,1
+B16010_001,Estimate!!Total,ed_totpop,1,0
+B16010_002,Estimate!!Total!!Less than high school graduate,ed_12,1,0
+B16010_015,Estimate!!Total!!High school graduate (includes equivalency),ed_diploma,1,0
+B16010_028,Estimate!!Total!!Some college or associate's degree,ed_somecol ,1,0
+B16010_041,Estimate!!Total!!Bachelor's degree or higher,ed_ba,1,0
+B16010_048,Estimate!!Total!!Bachelor's degree or higher!!Not in labor force,ed_profdeg,1,0

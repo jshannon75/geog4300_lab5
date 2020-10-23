@@ -1,0 +1,107 @@
+---
+title: 'Geog4/6300: Lab 6'
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Correlation and ANOVA
+
+**Value:** 30 points
+
+**Overview**
+In this lab, you'll work with county level election and census data to answer two questions: (1) how did association between the presidential vote (measured by vote for the Republican candidate) and educational attainment change between 2008 and 2016 and (2) Were there regional differences in the vote for the Republican candidate across years? To do so, you'll need to prepare a dataset for analysis and run chi-square, ANOVA, and post-hoc (TukeyHSD) tests.
+
+Our dataset is drawn from the American Community Survey and [this Github repository](https://github.com/tonmcg/US_County_Level_Election_Results_08-16) giving the votes by county in 2008, 2012, and 2016. The ACS data are the pooled five-year samples for 2006-10, 2010-14, and 2014-18 respectively. Let's load the data from the lab folder:
+
+```{r}
+election_data<-read_csv("data/elections0816_demog_pct.csv")
+```
+
+The raw population counts and rates (percentages) are both included in this dataset. You can see a description of the variables in the setup/census_vars.csv variables.
+
+### Part 1: Correlation analysis
+
+In this section, you'll be measuring the correlation between the gop_pct (% voting for the Republican) variable and the five variables showing *highest* level of educational attainment as a rate:
+
+*ed_lesshs_pct: % of population with less than a high school diploma
+*ed_hsdiploma_pct: % of population with a high school diploma/GED
+*ed_lessba_pct: % of population with some college or an associate's degree
+*ed_ba_pct: % of population with a bachelor's degree
+*ed_graddeg_pct: % of population with a professional/graduate degree
+
+To start with, you will need to subset the data to two separate data frames, one for the 2008 election results and one for 2016.
+
+**Question 1 (2 points)** _Create these two data frames using the year_txt variable and subset for just the region variable (Census region) as well as our variables of interest (GOP voting and educational attainment). Call the heads of both using kable when you are done._
+
+```{r}
+#Code here
+```
+
+
+**Question 2 (4 points)** _Next you should assess the normality of the variables of interest. Use a histogram and Shapiro-Wilk test to do so for the 2016 data. Based on your results, is a parametric or non-parametric test needed?_
+
+```{r}
+#Code here
+```
+
+{Your text response here}
+
+
+**Question 3 (4 points)** _Now you can assess correlation in each year. Use the rcorr variable from the Hmisc package to analyze the correlation of our variables of interest in 2008 and 2016 using the Pearson or Spearman's test (depending on normality). Save the results of each function to an object and then call it in your code so it is visible in this knitted lab document._
+
+```{r}
+#Code here
+```
+
+**Question 4 (2 points)** _Look at the results of your correlation matrix for 2016. Evaluate the correlation between the GOP vote and the educational attainment variables, focusing on direction, magnitude and significance._
+
+{Your response here}
+
+**Question 5 (2 points)** _Use the tidy function from broom to transform the results of the rcorr function in question 3 to a data frame format. Filter this to just include results showing correlation with the GOP vote in each county and add a new column that gives the year for each dataset. Then combine these two datasets using bind_rows or rbind. Call the head of the table when you are done._
+
+```{r}
+#Code here
+```
+
+**Question 6 (2 points)** _Create a ladder plot (similar to the one shown in the class code that shows the change in correlation coefficient between 2008 and 2016 for each subgroup in this analysis (e.g., those without a diploma, those with a diploma only)._
+
+```{r}
+#Code here
+```
+
+**Question 7 (2 points)** _Interpret the graph you created in question 6. How did the associations between educational attainment and vote for the Republican candidate change between 2008 and 2016? Focus on the direction and magnitude of this change._
+
+### Part 2: ANOVA
+In this section you'll calcluate the change in vote for the Republican candidate by county and then use ANOVA/post-hoc tests to determine if these changes differed across the four U.S. Census regions.
+
+To start with, you'll need to calculate that change in vote.
+
+**Question 8 (2 points)** _Subset the initial dataset you loaded at the start of this lab so it includes just the region, year_txt, and gop_pct variables. Transform this data so the years are wide (individual columns) rather than long. Then calculate the change in Republican vote between 2008 and 2016. Call the head of your table when done._
+
+```{r}
+#Code here
+```
+
+**Question 9 (3 points)** _Create a boxplot that shows the distribution of the vote change variable you just created in question 6 by census region. Describe two notable trends shown by this graph._
+
+```{r}
+#Code here
+```
+
+{Text here}
+
+**Question 10 (4 points)** _Let's assume the change variable is normally distributed. Do an ANOVA analysis of that variable across regions and call the results. Then run a TukeyHSD test on the output as a post-hoc test._
+
+```{r}
+#Code here
+```
+
+**Question 11 (3 points)** _Based on the analysis you did in question 10, was the change in Republican vote between 2008 and 2012 different between geographic regions? If so, which regions appear to be different from each other? Use the box plot you created in question 9 to describe the direction of difference as well as significance (e.g., which regions were higher or lower than others._
+
+{Text here.}
