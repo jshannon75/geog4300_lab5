@@ -64,7 +64,7 @@ Based on the results of the previous questions, test whether the incomes of surv
 
 While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits, the CPS provides data on other emergency food sources. Here, you will look at use of emergency food from a church, food pantry, or food bank over the last year (FSFDBNK) in New York, New Jersey, and Pennsylvania.
 
-**Question 7 (2 points)** _Go back to the original CPS dataset and filter for records with valid responses to FSFDBNK (<6 on the scale) that are in the states listed above. Call the head of the table when done_
+**Question 7 (2 points)** _Reload the original CPS dataset (so that you're not filtering out based on EARNWEEK as you did in question 1). Now filter for records with valid responses to FSFDBNK (<6 on the scale) that are in the states listed above. Call the head of the table when done_
 
 ```{r}
 #Code goes here.
@@ -88,7 +88,7 @@ While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits
 {Response goes here.}
 
 ###Extra credit! (2 points)
-Calculate which city in this three state area is highest for category 1 (no usage of food bank sites). What is city and what is their rate? To calculate this, you'll need to count responses grouped by the METAREA variable within the regional dataset you created in question 7.
+Calculate which city in this three state area has the highest rate for category 1 (no usage of food bank sites). What is city and what is their rate? To calculate this, you'll need to count responses grouped by the METAREA variable within the regional dataset you created in question 7.
 
 ```{r}
 #Code goes here
