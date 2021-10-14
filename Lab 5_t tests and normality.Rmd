@@ -12,8 +12,6 @@ library(tidyverse)
 
 ## One and two sample difference tests; ANOVA; Goodness of fit tests
 
-**Value:** 30 points
-
 **Overview:**
 This lab continues work with the CPS dataset you used in Lab 4. You'll be conducting normality tests, two sample t tests, chi square tests, and ANOVA to test for differences within these data.
 
@@ -21,7 +19,7 @@ This lab continues work with the CPS dataset you used in Lab 4. You'll be conduc
 
 We're going to look at the variable for average weekly income: EARNWEEK. Load the IPMUS CPS dataset in this repository using read_csv. Filter these data so you have only valid responses, removing any observations with a value of 9999.99. Now let's test the normality of this variable.
 
-**Question 1 (2 points)** _Load the CPS data and filter it to only valid responses._
+**Question 1** _Load the CPS data and filter it to only valid responses._
 
 ```{r}
 #Code here
@@ -29,7 +27,7 @@ We're going to look at the variable for average weekly income: EARNWEEK. Load th
 ```
 
 
-**Question 2 (5 points)** _To assess the normality of the EARNWEEK variable, create a random sample of 5,000 records using the sample_n function (look it up in help for more information). Then do the following: 1) Perform a Shapiro-Wilk normality test on this variable. 2) Create a Q-Q plot with a line showing the normal distribution. 3) Create a histogram using ggplot or the base R function._
+**Question 2** _To assess the normality of the EARNWEEK variable, create a random sample of 5,000 records using the sample_n function (look it up in help for more information). Then do the following: 1) Perform a Shapiro-Wilk normality test on this variable. 2) Create a Q-Q plot with a line showing the normal distribution. 3) Create a histogram using ggplot or the base R function._
 
 ```{r}
 #Code here.
@@ -37,7 +35,7 @@ We're going to look at the variable for average weekly income: EARNWEEK. Load th
 ```
 
 
-**Question 3 (3 points)** _Based on the results you saw in question 1, is this variable normally distributed? How do each of those three tests inform your decision?_
+**Question 3** _Based on the results you saw in question 1, is this variable normally distributed? How do each of those three tests inform your decision?_
 
 {Your response here}
 
@@ -45,18 +43,18 @@ We're going to look at the variable for average weekly income: EARNWEEK. Load th
 
 Based on the results of the previous questions, test whether the incomes of survey respondents in Atlanta (METAREA code 521) and Chicago (1605) metropolitan areas were equal or different.
 
-**Question 4 (3 points)** _Based on the normality of the data, what is the appropriate test for determining if actual household incomes between these cities are significantly different (p=0.05)? Explain why this test is appropriate and give a null and alternative hypothesis for this test_
+**Question 4** _Based on the normality of the data, what is the appropriate statistical test for determining if actual household incomes between these cities are significantly different (p=0.05)? Explain why this test is appropriate and give a null and alternative hypothesis for this test_
 
 {Your response here.}
 
-**Question 5 (3 points)** _Create separate data frames for each metro. Then run the test you identified in question 3. Also identify the mean and median values for each dataset._
+**Question 5** _Run the test you identified in question 3. Also identify the mean and median values for each dataset._
 
 ```{r}
-#Code goeshere
+#Code goes here
 ```
 
 
-**Question 6 (2 points)** _Interpret the results of the analysis you did in question 4. Do you reject the null hypothesis? Why or why not? What can we say about household incomes in these two metros?_
+**Question 6** _Interpret the results of the analysis you did in question 4. Do you reject the null hypothesis? Why or why not? What can we say about household incomes in these two metros, focusing on the significance of the test result and the actual difference in means?_
 
 {Your response here.}
 
@@ -64,33 +62,29 @@ Based on the results of the previous questions, test whether the incomes of surv
 
 While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits, the CPS provides data on other emergency food sources. Here, you will look at use of emergency food from a church, food pantry, or food bank over the last year (FSFDBNK) in New York, New Jersey, and Pennsylvania.
 
-**Question 7 (2 points)** _Reload the original CPS dataset (so that you're not filtering out based on EARNWEEK as you did in question 1). Now filter for records with valid responses to FSFDBNK (<6 on the scale) that are in the states listed above. Call the head of the table when done_
+**Question 7** _Reload the original CPS dataset (so that you're not filtering out based on EARNWEEK as you did in question 1). Now filter for records with valid responses to FSFDBNK (<6 on the scale) that are in the states listed above. Call the head of the table when done_
 
 ```{r}
 #Code goes here.
 ```
 
 
-**Question 8 (3 points)** _Create a contingency table of responses to the FSFDBNK variable (the columns of the table) by state using the table function. Then conduct a chi square test on this table._
+**Question 8** _Create a contingency table of responses to the FSFDBNK variable by state. This should show the number of observations in each category for each state. Then conduct a chi square test on this table._
 
 ```{r}
 #Code goes here.
 ```
 
-**Question 9 (4 points)** _Create a small multiples bar graph, faceted by state, that shows the number of responses in each category for the table you created in question 8. You will need to use stat="identity" in the geom_bar function. You will also need to use scales="free" as a parameter in the faceting function to let the y axis values vary by state._
 
-```{r}
-#Code goes here
-```
-
-**Question 10 (3 points)** _What were your null and alternative hypotheses for the chi square test? Based on the results of your test and the visualization you made for question 12, what conclusions can you make about food bank usage? _
+**Question 9** _What were your null and alternative hypotheses for the chi square test? Based on the results of your test and the visualization you made for question 12, what conclusions can you make about food bank usage? Refer to the actual differences in rates between states as well as significance in your interpretation._
 
 {Response goes here.}
 
-###Extra credit! (2 points)
+###Bonus challenge!
 Calculate which city in this three state area has the highest rate for category 1 (no usage of food bank sites). What is city and what is their rate? To calculate this, you'll need to count responses grouped by the METAREA variable within the regional dataset you created in question 7.
 
 ```{r}
 #Code goes here
 ```
 
+**Lab reflection:** _How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What were the biggest things you learned by completing it? How would you rate it low pass/pass/high pass)?_
