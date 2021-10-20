@@ -54,6 +54,9 @@ combined<-election_data %>%
          division=Division) %>%
   rename(gisjn_cty=CTY_TXT)
 
+combined[is.na(combined)]<-0
+combined$totpop_ind<-rowSums(combined[18:29],na.rm=TRUE)
+
 #write_csv(combined,"data/elections0816_demog.csv",na = "0")
 combined<-combined %>%
   mutate(dem_pct=dem/total*100,
