@@ -76,7 +76,7 @@ While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits
 ```
 
 
-**Question 9** _What were your null and alternative hypotheses for the chi square test? Based on the results of your test and the visualization you made for question 12, what conclusions can you make about food bank usage? Refer to the actual differences in rates between states as well as significance in your interpretation._
+**Question 9** _What were your null and alternative hypotheses for the chi square test? Based on the results of your analysis, what conclusions can you make about food bank usage? Refer to the actual differences in rates between states as well as significance in your interpretation._
 
 {Response goes here.}
 
