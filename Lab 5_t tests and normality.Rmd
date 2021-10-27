@@ -35,7 +35,7 @@ We're going to look at the variable for average weekly income: EARNWEEK. Load th
 ```
 
 
-**Question 3** _Based on the results you saw in question 1, is this variable normally distributed? How do each of those three tests inform your decision?_
+**Question 3** _Based on the results you saw in question 2, is this variable normally distributed? How do each of those three tests inform your decision?_
 
 {Your response here}
 
@@ -47,7 +47,7 @@ Based on the results of the previous questions, test whether the incomes of surv
 
 {Your response here.}
 
-**Question 5** _Run the test you identified in question 3. Also identify the mean and median values for each dataset._
+**Question 5** _Run the test you identified in question 4. Also identify the mean and median values for each dataset._
 
 ```{r}
 #Code goes here
