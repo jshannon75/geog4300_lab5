@@ -1,5 +1,5 @@
 ---
-title: 'Geog4/6300: Lab 5'
+title: 'Geog4/6300: Lab 4'
 output: github_document
 editor_options: 
   chunk_output_type: console
@@ -13,7 +13,7 @@ library(tidyverse)
 ## One and two sample difference tests; ANOVA; Goodness of fit tests
 
 **Overview:**
-This lab continues work with the CPS dataset you used in Lab 4. You'll be conducting normality tests, two sample t tests, chi square tests, and ANOVA to test for differences within these data.
+This lab continues work with the CPS dataset you used in Lab 3. You'll be conducting normality tests, two sample t tests, chi square tests, and ANOVA to test for differences within these data.
 
 ###Part 1: Testing the normality of the EARNWEEK variable
 
@@ -27,7 +27,7 @@ We're going to look at the variable for average weekly income: EARNWEEK. Load th
 ```
 
 
-**Question 2** _To assess the normality of the EARNWEEK variable, create a random sample of 5,000 records using the sample_n function (look it up in help for more information). Then do the following: 1) Perform a Shapiro-Wilk normality test on this variable. 2) Create a Q-Q plot with a line showing the normal distribution. 3) Create a histogram using ggplot or the base R function._
+**Question 2** _To assess the normality of the EARNWEEK variable, you create a random sample of 5,000 records using the sample_n function (look it up in help for more information). That's because the Shapiro-Wilk test can't handle more than that many records. Create that sample using slice_sample and then do the following: 1) Perform a Shapiro-Wilk normality test on this variable. 2) Create a Q-Q plot with a line showing the normal distribution. 3) Create a histogram using ggplot or the base R function._
 
 ```{r}
 #Code here.
@@ -47,7 +47,7 @@ Based on the results of the previous questions, test whether the incomes of surv
 
 {Your response here.}
 
-**Question 5** _Run the test you identified in question 4. Also identify the mean and median values for each dataset._
+**Question 5** _Run the test you identified in question 4. Be sure to use the FULL sample for both cities (not the smaller sample from Question 2) Also identify the mean and median values for each dataset._
 
 ```{r}
 #Code goes here
@@ -62,7 +62,7 @@ Based on the results of the previous questions, test whether the incomes of surv
 
 While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits, the CPS provides data on other emergency food sources. Here, you will look at use of emergency food from a church, food pantry, or food bank over the last year (FSFDBNK) in New York, New Jersey, and Pennsylvania.
 
-**Question 7** _Reload the original CPS dataset (so that you're not filtering out based on EARNWEEK as you did in question 1). Now filter for records with valid responses to FSFDBNK (<6 on the scale) that are in the states listed above. Call the head of the table when done_
+**Question 7** _Reload the original CPS dataset (so that you're not filtering out based on EARNWEEK as you did in question 1). Now filter for records with valid responses to FSFDBNK (<6 on the scale) that are in the states listed above. Call the head of the table with kable when done_
 
 ```{r}
 #Code goes here.
@@ -81,10 +81,18 @@ While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits
 {Response goes here.}
 
 ###Bonus challenge!
-Calculate which city in this three state area has the highest rate for category 1 (no usage of food bank sites). What is city and what is their rate? To calculate this, you'll need to count responses grouped by the METAREA variable within the regional dataset you created in question 7.
+Pick one other variable from this CPS dataset and create an appropriate state level estimate. This will probably involve calculating a rate (e.g., % immigrant) or average (e.g., mean year of immigration).  Map out your estimate using the states_albers geopackage file in the data folder for this lab. 
 
 ```{r}
 #Code goes here
 ```
+
+Pick two states and test whether they statistically differ with regards to the variable you created. This will mean testing the normality of the variable, running the appropriate difference test, and interpreting the results. In addition to your code, write a short description of your process, explaining what your results show and why you used the test you did.
+
+```{r}
+#Code goes here
+```
+
+{Explanation goes here.}
 
 **Lab reflection:** _How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What were the biggest things you learned by completing it? How would you rate it low pass/pass/high pass)?_
