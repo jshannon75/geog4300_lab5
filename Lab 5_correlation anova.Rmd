@@ -1,5 +1,5 @@
 ---
-title: 'Geog4/6300: Lab 6'
+title: 'Geog4/6300: Lab 5'
 output: github_document
 editor_options: 
   chunk_output_type: console
@@ -48,45 +48,34 @@ In this section, you'll be measuring the correlation between the gop_pct (% voti
 
 {Your text response here}
 
-
-**Question 3** _Now you can assess correlation in each year. Use the rcorr function from the Hmisc package to analyze the correlation of our variables of interest in 2008 and 2016 using the Pearson or Spearman's test (depending on normality). Save the results of each function to an object and then call it in your code so it is visible in this knitted lab document._
+**Question 3** _Now you can assess correlation in each year. Use the rcorr function from the Hmisc package to analyze the correlation of our variables of interest in 2008 and 2016 using the Pearson or Spearman's test (depending on normality). Save the results of each function to an object and then call it in your code so the correlation is visible in this knitted lab document._
 
 ```{r}
 #Code here
 ```
 
-**Question 4** _Look at the results of your correlation matrix for 2016. Evaluate the correlation between the GOP vote and the educational attainment variables, focusing on direction, magnitude and significance._
+**Question 4** _Use one of the packages discussed in class (ggcorrplot or corrgram) to create a graphic of the two correlation matrices you created in question 3._
+
+```{r}
+#Code here
+```
+
+**Question 5** _Based on results from your analysis in questions 3 and 4, evaluate the correlation between the GOP vote and the educational attainment variables in both 2008 and 2016. focusing on direction, magnitude and significance. What differences do you see within and between those two years?_
 
 {Your response here}
-
-**Question 5** _Use the tidy function from broom to transform the results of the rcorr function in question 3 to a data frame format. Filter this to just include results showing correlation of the educational attainment variables with the GOP vote and add a new column that gives the year for each dataset. Then combine these two datasets using bind_rows or rbind. Call the head of the table when you are done._
-
-```{r}
-#Code here
-```
-
-**Question 6** _Create a ladder plot (similar to the one shown in the class code) that shows the change in correlation coefficient between 2008 and 2016 for each subgroup in this analysis (e.g., those without a diploma, those with a diploma only)._
-
-```{r}
-#Code here
-```
-
-**Question 7** _Interpret the graph you created in question 6. How did the associations between educational attainment and vote for the Republican candidate *change* between 2008 and 2016? Focus on the direction and magnitude of this change._
-
-{Type answer here.}
 
 ### Part 2: ANOVA
 In this section you'll calcluate the change in vote for the Republican candidate by county and then use ANOVA/post-hoc tests to determine if these changes differed across the four U.S. Census regions.
 
 To start with, you'll need to calculate that change in vote.
 
-**Question 8** _Subset the dataset you loaded at the start of this lab so it includes just the region, county fips, year_txt, and gop_pct variables. Transform this data so the years are wide (individual columns) rather than long. Then calculate the change in percentage Republican vote between 2008 and 2016. Call the head of your table when done._
+**Question 6** _Subset the dataset you loaded at the start of this lab so it includes just the region, county fips, year_txt, and gop_pct variables. Transform this data so the years are wide (individual columns) rather than long. Then calculate the change in percentage Republican vote between 2008 and 2016. Call the head of your table when done._
 
 ```{r}
 #Code here
 ```
 
-**Question 9** _Create a boxplot that shows the distribution of the vote change variable you just created in question 6 by census region. Describe two notable trends shown by this graph._
+**Question 7** _Create a boxplot that shows the distribution of the vote change variable you just created in question 6 by census region. Describe two notable trends shown by this graph._
 
 ```{r}
 #Code here
@@ -94,14 +83,23 @@ To start with, you'll need to calculate that change in vote.
 
 {Text here}
 
-**Question 10** _Let's assume the change variable is normally distributed. Do an ANOVA analysis of that variable across regions and call the results. Then run a TukeyHSD test on the output as a post-hoc test._
+**Question 8** _Let's assume the change variable is normally distributed. Do an ANOVA analysis of that variable across regions and call the results. Then run a TukeyHSD test on the output as a post-hoc test._
 
 ```{r}
 #Code here
 ```
 
-**Question 11** _Based on the analysis you did in question 10, was the change in Republican vote between 2008 and 2016 different between geographic regions? If so, which regions appear to be different from each other? Use the box plot you created in question 9 to describe the direction of difference as well as significance (e.g., which regions were higher or lower than others._
+**Question 9** _Based on the analysis you did in question 8, was the change in Republican vote between 2008 and 2016 different between geographic regions? If so, which regions appear to be different from each other? Use the box plot you created in question 9 to describe the direction of difference as well as significance (e.g., which regions were higher or lower than others._
 
 {Text here.}
 
-**Lab reflection:** _How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What were the biggest things you learned by completing it? How would you rate it low pass/pass/high pass)?_
+**Bonus question**
+The election data we used for this project also includes median income. In 2012, what was the correlation between median income and the GOP vote share for the whole country? Then pick two regions and calculate the correlation between these variables in each one. Present your results and explain what they tell you about the relationship between these variables country wide and within each of the regions you chose focusing on the direction and magnitude of the correlation.
+
+```{r}
+#Code here
+```
+
+{Discussion here.}
+
+**Lab reflection:** _How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What were the biggest things you learned by completing it?_
