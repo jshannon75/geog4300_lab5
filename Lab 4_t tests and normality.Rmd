@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-## One and two sample difference tests; ANOVA; Goodness of fit tests
+## One and two sample difference tests
 
 **Overview:**
 This lab continues work with the CPS dataset you used in Lab 3. You'll be conducting normality tests, two sample t tests, chi square tests, and ANOVA to test for differences within these data.
@@ -96,3 +96,5 @@ Pick two states and test whether they statistically differ with regards to the v
 {Explanation goes here.}
 
 **Lab reflection:** _How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What were the biggest things you learned by completing it?_
+
+{Explanation goes here.}
