@@ -80,7 +80,7 @@ While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits
 
 {Response goes here.}
 
-###Bonus challenge!
+###Challenge question:
 Pick one other variable from this CPS dataset and create an appropriate state level estimate. This will probably involve calculating a rate (e.g., % immigrant) or average (e.g., mean year of immigration).  Map out your estimate using the states_albers geopackage file in the data folder for this lab. 
 
 ```{r}

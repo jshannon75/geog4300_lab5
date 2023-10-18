@@ -11,7 +11,6 @@ Question 6:<p>
 Question 7:<p>
 Question 8:<p>
 Question 9:<p>
-Bonus:<p> 
-Reflection:
+Challenge:<p> 
 <p>
-Overall: 
+Overall rating/comments: 
