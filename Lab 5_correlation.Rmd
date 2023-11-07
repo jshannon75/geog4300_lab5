@@ -1,0 +1,79 @@
+---
+title: 'Geog4/6300: Lab 5'
+output: github_document
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+## Correlation and ANOVA
+
+**Overview**
+In this lab, you'll work with county level election and census data to answer two questions: (1) how did association between the presidential vote (measured by vote for the Republican candidate) and educational attainment change between 2008 and 2016 and (2) Were there regional differences in the vote for the Republican candidate across years? To do so, you'll need to prepare a dataset for analysis and run chi-square, ANOVA, and post-hoc (TukeyHSD) tests.
+
+Our dataset is drawn from the American Community Survey and [this Github repository](https://github.com/tonmcg/US_County_Level_Election_Results_08-20) giving the votes by county in 2008, 2012, and 2016. The ACS data are the pooled five-year samples for 2006-10, 2010-14, and 2014-18 respectively. Let's load the data from the lab folder:
+
+```{r}
+election_data<-read_csv("data/elections0816_demog_pct.csv")
+```
+
+The raw population counts and rates (percentages) are both included in this dataset. You can see a description of the variables in the setup/census_vars.csv variables.
+
+### Part 1: Correlation analysis
+
+In this section, you'll be measuring the correlation between the gop_pct (% voting for the Republican) variable and the five variables showing *highest* level of educational attainment as a rate:
+
+*ed_lesshs_pct: % of population with less than a high school diploma
+*ed_hsdiploma_pct: % of population with a high school diploma/GED
+*ed_lessba_pct: % of population with some college or an associate's degree
+*ed_ba_pct: % of population with a bachelor's degree
+*ed_graddeg_pct: % of population with a professional/graduate degree
+
+**Question 1** _To start with, you will need to subset the data to two separate data frames, one for the 2008 election results and one for 2016. Create these two data frames using the year_txt variable and select just the region variable (Census region) as well as our variables of interest (GOP voting and educational attainment). Call the heads of both using kable when you are done._
+
+```{r}
+#Code here
+```
+
+
+**Question 2** _Next you should assess the normality of the variables of interest. Use two of the three measures discussed in class (histogram, QQ plot, and/or Shapiro-Wilk test) to do so for the 2016 data. Based on your results, is a parametric or non-parametric test needed?_
+
+```{r}
+#Code here
+```
+
+{Your text response here}
+
+**Question 3** _Now you can assess correlation in each year. Use the rcorr function from the Hmisc package to analyze the correlation of our variables of interest in 2008 and 2016 using the Pearson or Spearman's test (depending on normality). Save the results of each function to an object and then call it in your code so the correlation is visible in this knitted lab document._
+
+```{r}
+#Code here
+```
+
+**Question 4** _Use one of the packages discussed in class (ggcorrplot or corrgram) to create a graphic of the two correlation matrices you created in question 3._
+
+```{r}
+#Code here
+```
+
+**Question 5** _Based on results from your analysis in questions 3 and 4, evaluate the correlation between the GOP vote and the educational attainment variables in both 2008 and 2016. focusing on direction, magnitude and significance. What differences do you see within and between those two years?_
+
+{Your response here}
+
+
+**Challenge question**
+The election data we used for this project also includes median income. In 2012, what was the correlation between median income and the GOP vote share for the whole country? Then pick two regions and calculate the correlation between these variables in each one. Present your results and explain what they tell you about the relationship between these variables country wide and within each of the regions you chose focusing on the direction and magnitude of the correlation.
+
+```{r}
+#Code here
+```
+
+{Discussion here.}
+
+**Lab reflection:** _How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What were the biggest things you learned by completing it?_
+
+{Discussion here.}
