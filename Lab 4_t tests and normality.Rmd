@@ -13,7 +13,7 @@ library(tidyverse)
 ## One and two sample difference tests
 
 **Overview:**
-This lab continues work with the CPS dataset you used in Lab 3. You'll be conducting normality tests, two sample t tests, chi square tests, and ANOVA to test for differences within these data.
+This lab continues work with the CPS dataset you used in Lab 3. You'll be conducting normality tests, statistical tests of difference, and chi square tests to analyze these data.
 
 ###Part 1: Testing the normality of the EARNWEEK variable
 
@@ -27,7 +27,7 @@ We're going to look at the variable for average weekly income: EARNWEEK. Load th
 ```
 
 
-**Question 2** _To assess the normality of the EARNWEEK variable, you create a random sample of 5,000 records using the sample_n function (look it up in help for more information). That's because the Shapiro-Wilk test can't handle more than that many records. Create that sample using slice_sample and then do the following: 1) Perform a Shapiro-Wilk normality test on this variable. 2) Create a Q-Q plot with a line showing the normal distribution. 3) Create a histogram using ggplot or the base R function._
+**Question 2** _To assess the normality of the EARNWEEK variable, you create a random sample of 5,000 records using the `slice_sample` function (look it up in help for more information). That's because the Shapiro-Wilk test can't handle more than 5,000 records. Create that sample using `slice_sample` and then do the following: 1) Perform a Shapiro-Wilk normality test on this variable. 2) Create a Q-Q plot with a line showing the normal distribution. 3) Create a histogram using ggplot or the base R function._
 
 ```{r}
 #Code here.
@@ -47,14 +47,13 @@ Based on the results of the previous questions, test whether the incomes of surv
 
 {Your response here.}
 
-**Question 5** _Run the test you identified in question 4. Be sure to use the FULL sample for both cities (not the smaller sample from Question 2) Also identify the mean and median values for each dataset._
+**Question 5** _Run the test you identified in question 4. Be sure to use the FULL sample for both cities (not the smaller sample from Question 2). Also identify the mean and median values for each dataset, which you can use to determine the nature of the difference--which city (if any) has higher incomes._
 
 ```{r}
 #Code goes here
 ```
 
-
-**Question 6** _Interpret the results of the analysis you did in question 4. Do you reject the null hypothesis? Why or why not? What can we say about household incomes in these two metros, focusing on the significance of the test result and the actual difference in means?_
+**Question 6** _Interpret the results of the analysis you did in question 4. Do you reject the null hypothesis? Why or why not? What can we say about household incomes in these two metros, focusing on the significance of the test result and the actual difference in means/medians?_
 
 {Your response here.}
 
@@ -68,15 +67,22 @@ While the U.S. Census regularly provides data on use of SNAP/Food stamp benefits
 #Code goes here.
 ```
 
-
-**Question 8** _Create a contingency table of responses to the FSFDBNK variable by state. This should show the number of observations in each category for each state. Then conduct a chi square test on this table._
+**Question 8** _Create a contingency table of responses to the FSFDBNK variable by state. This should show the number of observations in each category for each state. In addition, calculate the percentage of the population that used food pantries at all in the last year (categories 2-5) for each state._
 
 ```{r}
 #Code goes here.
 ```
 
+**Question 9** _Identify if there are statistically significant differences between these states by conducting a chi square test on the contingency table in question 8. What were your null and alternative hypotheses for the chi square test? Do you reject the null hypothesis based on these results? Why or why not?_
 
-**Question 9** _What were your null and alternative hypotheses for the chi square test? Based on the results of your analysis, what conclusions can you make about food bank usage? Refer to the actual differences in rates between states as well as significance in your interpretation._
+```{r}
+#Code goes here
+```
+
+
+{Response goes here.}
+
+**Question 10** _Based on the results of your analysis in questions 8 and 9, what conclusions can you make about food bank usage? Refer to the actual differences in rates between states as well as the significance of the chi-square test in your interpretation._
 
 {Response goes here.}
 
