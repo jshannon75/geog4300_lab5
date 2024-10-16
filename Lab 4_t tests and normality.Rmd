@@ -101,6 +101,10 @@ Pick two states and test whether they statistically differ with regards to the v
 
 {Explanation goes here.}
 
+**Disclosure of assistance:** _Besides class materials, what other sources of assistance did you use while completing this lab? These can include input from classmates, relevant material identified through web searches (e.g., Stack Overflow), or assistance from ChatGPT or other AI tools. How did these sources support your own learning in completing this lab?_
+
+{Response here.}
+
 **Lab reflection:** _How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What were the biggest things you learned by completing it?_
 
 {Explanation goes here.}
