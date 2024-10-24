@@ -33,14 +33,14 @@ In this section, you'll be measuring the correlation between the gop_pct (% voti
 *ed_ba_pct: % of population with a bachelor's degree
 *ed_graddeg_pct: % of population with a professional/graduate degree
 
-**Question 1** _To start with, you will need to subset the data to two separate data frames, one for the 2008 election results and one for 2016. Create these two data frames using the year_txt variable and select just the region variable (Census region) as well as our variables of interest (GOP voting and educational attainment). Call the heads of both using kable when you are done._
+**Question 1** _To start with, you will need to subset the data to two separate data frames, one for the 2008 election results and one for 2016. Create these two data frames using the `year_txt` variable and select just the region variable (Census region) as well as our variables of interest (GOP voting and educational attainment). Call the heads of both using kable when you are done._
 
 ```{r}
 #Code here
 ```
 
 
-**Question 2** _Next you should assess the normality of the variables of interest. Use two of the three measures discussed in class (histogram, QQ plot, and/or Shapiro-Wilk test) to do so for the 2016 data. Based on your results, is a parametric or non-parametric test needed?_
+**Question 2** _Next you should assess the normality of the variables of interest. Use two of the three measures discussed in class (histogram, QQ plot, and/or Shapiro-Wilk test) to do so for the 2016 data. Based on your results, is a parametric or non-parametric versiob if correlation more appropriate?_
 
 ```{r}
 #Code here
@@ -54,7 +54,7 @@ In this section, you'll be measuring the correlation between the gop_pct (% voti
 #Code here
 ```
 
-**Question 4** _Use one of the packages discussed in class (ggcorrplot or corrgram) to create a graphic of the two correlation matrices you created in question 3._
+**Question 4** _Use the corrplot package to create a graphic of the two correlation matrices you created in question 3 using whatever styling parameters (shapes, color scheme, sorting, etc.) you feel are best._
 
 ```{r}
 #Code here
@@ -64,6 +64,20 @@ In this section, you'll be measuring the correlation between the gop_pct (% voti
 
 {Your response here}
 
+**Question 6** _How did the percentage of the vote for the GOP candidate change *across counties* from 2008 to 2016. Join the two data frames for these years and calculate the difference in the GOP vote across these two elections. Also include the education variables from the 2016 data so you can assess correlation in the next question. Call the head of the resulting data frame using `kable` when you are done._
+
+```{r}
+#Code here
+```
+
+
+**Question 7** _Using `cor` and `corrplot`, create a visualization of the correlation between the *change* in GOP vote between 2008 and 2016 (created in question 6) and your education variables for the 2016 data. Include the text labels using the `addCoef.col` parameter as shown in the class script. How would you interpret the results shown in this graph? How is the question that it answers story different (if at all) from the question answered by the graph in question 4?_
+
+```{r}
+#Code here
+```
+
+{Response here.}
 
 **Challenge question**
 The election data we used for this project also includes median income. In 2012, what was the correlation between median income and the GOP vote share for the whole country? Then pick two regions and calculate the correlation between these variables in each one. Present your results and explain what they tell you about the relationship between these variables country wide and within each of the regions you chose focusing on the direction and magnitude of the correlation.
@@ -74,6 +88,11 @@ The election data we used for this project also includes median income. In 2012,
 
 {Discussion here.}
 
+**Disclosure of assistance:** _Besides class materials, what other sources of assistance did you use while completing this lab? These can include input from classmates, relevant material identified through web searches (e.g., Stack Overflow), or assistance from ChatGPT or other AI tools. How did these sources support your own learning in completing this lab?_
+
+{Response here.}
+
 **Lab reflection:** _How do you feel about the work you did on this lab? Was it easy, moderate, or hard? What were the biggest things you learned by completing it?_
 
 {Discussion here.}
+
