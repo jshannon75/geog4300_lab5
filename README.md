@@ -9,8 +9,7 @@ Complete the lab assignment by filling in the template. Knit it to a Github docu
 * Question 5:<p>
 * Question 6:<p>
 * Question 7:<p>
-* Question 8:<p>
-* Question 9:<p>
-* Bonus:<p>
+
+* Challenge:<p>
 <p>
 Overall rating: 
